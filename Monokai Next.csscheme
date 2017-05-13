@@ -1,0 +1,270 @@
+@name "Monokai Next";
+@author "AlexKvazos";
+
+* {
+  guide: #3F3F3F;
+  activeGuide: #676767;
+  background: #212121;
+  bracketContentsForeground: #F8F8F2A5;
+  bracketContentsOptions: underline;
+  bracketsForeground: #F8F8F2A5;
+  bracketsOptions: underline;
+  caret: #FFFFFF;
+  findHighlight: #FFE792;
+  findHighlightForeground: #000000;
+  foreground: #F8F8F2;
+  invisibles: #565656;
+  lineHighlight: #323232;
+  misspelling: #F92672;
+  selection: #464646;
+  selectionBorder: #292A2A;
+  tagsOptions: stippled_underline;
+}
+
+comment {
+  @name "Comment";
+  foreground: #707070;
+  fontStyle: italic;
+}
+
+string {
+  @name "String";
+  foreground: #E6DB74;
+}
+
+constant.numeric {
+  @name "Number";
+  foreground: #AE81FF;
+}
+
+constant.language {
+  @name "Built-in constant";
+  foreground: #AE81FF;
+}
+
+constant.character, constant.other {
+  @name "User-defined constant";
+  foreground: #AE81FF;
+}
+
+variable {
+  @name "Variable";
+  fontStyle: none;
+}
+
+keyword - (source.c keyword.operator | source.c++ keyword.operator | source.objc keyword.operator | source.objc++ keyword.operator), keyword.operator.word {
+  @name "Keyword";
+  foreground: #F92672;
+}
+
+punctuation.definition.annotation {
+  @name "Annotation Punctuation";
+  foreground: #F92672;
+}
+
+variable.other.dollar.only.js {
+  @name "JavaScript Dollar";
+  foreground: #F92672;
+}
+
+storage {
+  @name "Storage";
+  foreground: #F92672;
+  fontStyle: none;
+}
+
+storage.type {
+  @name "Storage type";
+  foreground: #66D9EF;
+  fontStyle: italic;
+}
+
+entity.name - (entity.name.filename | entity.name.section | entity.name.tag | entity.name.label) {
+  @name "Entity name";
+  foreground: #A6E22E;
+  fontStyle: none;
+}
+
+entity.other.inherited-class {
+  @name "Inherited class";
+  foreground: #A6E22E;
+  fontStyle: italic underline;
+}
+
+variable.parameter - (source.c | source.c++ | source.objc | source.objc++) {
+  @name "Function argument";
+  foreground: #FD971F;
+  fontStyle: italic;
+}
+
+variable.language {
+  @name "Language variable";
+  foreground: #FD971F;
+  fontStyle: italic;
+}
+
+entity.name.tag {
+  @name "Tag name";
+  foreground: #F92672;
+  fontStyle: none;
+}
+
+entity.other.attribute-name {
+  @name "Tag attribute";
+  foreground: #A6E22E;
+  fontStyle: none;
+}
+
+variable.function, variable.annotation {
+  @name "Function call";
+  foreground: #66D9EF;
+  fontStyle: none;
+}
+
+support.function, support.macro {
+  @name "Library function";
+  foreground: #66D9EF;
+  fontStyle: none;
+}
+
+support.constant {
+  @name "Library constant";
+  foreground: #66D9EF;
+  fontStyle: none;
+}
+
+support.type, support.class {
+  @name "Library class/type";
+  foreground: #66D9EF;
+  fontStyle: italic;
+}
+
+support.other.variable {
+  @name "Library variable";
+  fontStyle: none;
+}
+
+invalid {
+  @name "Invalid";
+  background: #F92672;
+  foreground: #F8F8F0;
+  fontStyle: none;
+}
+
+invalid.deprecated {
+  @name "Invalid deprecated";
+  background: #AE81FF;
+  foreground: #F8F8F0;
+}
+
+meta.structure.dictionary.json string.quoted.double.json {
+  @name "JSON String";
+  foreground: #CFCFC2;
+}
+
+string.unquoted.yaml {
+  @name "YAML String";
+  foreground: #F8F8F2;
+}
+
+meta.diff, meta.diff.header {
+  @name "diff.header";
+  foreground: #75715E;
+}
+
+markup.heading {
+  @name "markup headings";
+  fontStyle: bold;
+}
+
+markup.heading punctuation.definition.heading {
+  @name "markup headings";
+  foreground: #FD971F;
+}
+
+markup.heading.1 punctuation.definition.heading {
+  @name "markup h1";
+  foreground: #F92672;
+}
+
+markup.underline.link {
+  @name "markup links";
+  foreground: #66D9EF;
+}
+
+markup.bold {
+  @name "markup bold";
+  fontStyle: bold;
+}
+
+markup.italic {
+  @name "markup italic";
+  fontStyle: italic;
+}
+
+markup.italic markup.bold | markup.bold markup.italic {
+  @name "markup bold/italic";
+  fontStyle: bold italic;
+}
+
+punctuation.definition.thematic-break {
+  @name "markup hr";
+  foreground: #75715E;
+}
+
+markup.quote punctuation.definition.blockquote {
+  @name "markup blockquote";
+  foreground: #75715E;
+}
+
+markup.list.numbered.bullet {
+  @name "markup bullets";
+  foreground: #AE81FF;
+}
+
+markup.list.unnumbered.bullet | (markup.list.numbered punctuation.definition) {
+  @name "markup bullets";
+  foreground: #F8F8F8AA;
+}
+
+markup.raw {
+  @name "markup code";
+  background: #F8F8F818;
+}
+
+markup.raw punctuation.definition.raw {
+  @name "markup punctuation";
+  foreground: #F8F8F8AA;
+}
+
+text & (punctuation.definition.italic | punctuation.definition.bold | punctuation.definition.raw | punctuation.definition.link | punctuation.definition.metadata | punctuation.definition.image | punctuation.separator.table-cell | punctuation.section.table-header | punctuation.definition.constant) {
+  @name "markup punctuation";
+  foreground: #F8F8F8AA;
+}
+
+markup.deleted {
+  @name "diff.deleted";
+  foreground: #F92672;
+}
+
+markup.inserted {
+  @name "diff.inserted";
+  foreground: #A6E22E;
+}
+
+markup.changed {
+  @name "diff.changed";
+  foreground: #E6DB74;
+}
+
+constant.numeric.line-number.find-in-files - match {
+  foreground: #AE81FFA0;
+}
+
+entity.name.filename {
+  foreground: #E6DB74;
+}
+
+message.error {
+  foreground: #F83333;
+}
