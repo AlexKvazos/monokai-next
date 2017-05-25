@@ -4,7 +4,7 @@
 * {
   guide: #3F3F3F;
   activeGuide: #676767;
-  background: #212121;
+  background: #1E1E1E;
   bracketContentsForeground: #F8F8F2A5;
   bracketContentsOptions: underline;
   bracketsForeground: #F8F8F2A5;
